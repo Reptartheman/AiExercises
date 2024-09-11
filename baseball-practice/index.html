@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball Players</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Baseball Players</h1>
+    <form id="playerForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" required>
+        </div>
+        <div>
+            <label for="team">Team:</label>
+            <input type="text" id="team" name="team" required>
+        </div>
+        <div>
+            <label for="games">Games:</label>
+            <input type="number" id="games" name="games" required>
+        </div>
+        <div>
+            <label for="atBats">At Bats:</label>
+            <input type="number" id="atBats" name="atBats" required>
+        </div>
+        <div>
+            <label for="hits">Hits:</label>
+            <input type="number" id="hits" name="hits" required>
+        </div>
+        <div>
+            <label for="homeRuns">Home Runs:</label>
+            <input type="number" id="homeRuns" name="homeRuns" required>
+        </div>
+        <div>
+            <label for="RBIs">RBIs:</label>
+            <input type="number" id="RBIs" name="RBIs" required>
+        </div>
+        <div>
+            <label for="battingAverage">Batting Average:</label>
+            <input type="number" step="0.001" id="battingAverage" name="battingAverage" required>
+        </div>
+        <button id="submitBtn" type="submit">Add Player</button>
+    </form>
+    <table id="playersTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Team</th>
+                <th>Games</th>
+                <th>At Bats</th>
+                <th>Hits</th>
+                <th>Home Runs</th>
+                <th>RBIs</th>
+                <th>Batting Average</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated here by JavaScript -->
+        </tbody>
+    </table>
+    <script src="./baseballEx.js"></script>
+    <script src="./baseballLS.js"></script>
+    <script src="./baseballDOM.js"></script>
+</body>
+</html>
