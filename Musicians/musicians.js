@@ -1,4 +1,4 @@
-const jazzMusicians = [
+export const jazzMusicians = [
   {
     name: 'Louis Armstrong',
     instrument: 'Trumpet',
@@ -70,11 +70,7 @@ const jazzMusicians = [
     nationality: 'American'
   }
 ];
-//Print the names of all jazz musicians.
-const allMusicians = (array) => {
-  return array.forEach(musician => console.log(musician.name));
-}
-//allMusicians(jazzMusicians);
+
 
 const logNamesAndInstruments = (array) => {
   const before1920 = array.filter(musician => {
