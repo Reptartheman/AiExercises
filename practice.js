@@ -1,6 +1,6 @@
-const arrayOfStuff = ['oops', 'latter', 56, true, false, 'please', 'clams', 46, 22, 'alphabet'];
+export const arrayOfStuff = ['oops', 'latter', 56, true, false, 'please', 'clams', 46, 22, 'alphabet'];
 
-const objectOfStuff = {
+export const objectOfStuff = {
   thing1: 'long sprays of juice',
   thing2: 'Oppenheimer Mcgee',
   thing3: 'Why Taylor Swift?',
@@ -10,7 +10,7 @@ const objectOfStuff = {
   thing7: 'Owen Wilson saying Wow!'
 }
 
-const secondObject = {
+export const secondObject = {
   thing1: 'wobbly sparks',
   thing2: false,
   newThing3: 'No no no',
@@ -20,9 +20,9 @@ const secondObject = {
   newThing7: 'Russel Wilson says no!'
 }
 
-const arrayOfObjects = [{
+/* const arrayOfObjects = [{
   
-}]
+}] */
 
 //Write a function that takes an array and an index as arguments and returns the element at that index.
 function returnElement(array, index) {
@@ -476,18 +476,62 @@ function findOwen(object) {
   }
 
 }
-console.log(findOwen(objectOfStuff));
-/* 
+/* console.log(findOwen(objectOfStuff)); */
 
-Exercise 19: Transformations
-Write a function that transforms arrayOfStuff into an object where each key is the type of the element and the value is an array of elements of that type.
-Write a function that transforms objectOfStuff into an array of strings formatted as "key: value".
+
+/* Exercise 19: Transformations
+Write a function that transforms arrayOfStuff into an object where each key is the type of the element and the value is an array of elements of that type. */
+
+const transformMeDaddy = (array) => {
+  return array.reduce((acc, item) => {
+    const type = typeof item;
+    if(!acc[type]) {
+      acc[type] = [];
+    }
+    acc[type].push(item);
+    return acc;
+  }, {})
+};
+
+//console.log(transformMeDaddy(arrayOfStuff));
+
+//Write a function that transforms objectOfStuff into an array of strings formatted as "key: value".
+
+const transObject = (object) => {
+  const allEntries = Object.entries(object);
+  return allEntries.map(elem => elem.join(': ').toString());
+  
+}
+
+//console.log(transObject(objectOfStuff));
+
+/*
 Exercise 20: Validation
 Write a function that validates if arrayOfStuff contains only strings and booleans.
 Write a function that checks if all the values in objectOfStuff are unique.
-
-
 */
 
+const stringsAndBools = (array) => {
+  return array.every(elem => {
+    if (typeof elem === 'string' || typeof elem === 'boolean') {
+      return true;
+    } else {
+      return false;
+    }
+  });
+}
 
+//console.log(stringsAndBools(arrayOfStuff));
+
+
+const yourSoUnique = (obj) => {
+  const values = Object.values(obj);
+  const theSet = new Set(values);
+
+  return values.every(elem => {
+    return theSet.has(elem) ? true : false;
+  })
+}
+
+console.log(yourSoUnique(objectOfStuff));
 
