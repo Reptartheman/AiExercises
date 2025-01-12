@@ -1,0 +1,22 @@
+New Exercises:
+Find the musician born closest to 1950 Write a function that finds and returns the musician whose birth date is closest to the year 1950.
+
+Group musicians by instrument Write a function that groups the musicians by their instrument. It should return an object where the keys are the instruments, and the values are arrays of musicians who play that instrument.
+
+Find musicians whose famous works include a specific word Write a function that takes a word as an argument and returns a list of musicians whose famous works contain that word. For example, searching for the word "dream" would return musicians whose famous works include "Dream a Little Dream of Me".
+
+Count how many musicians were born after 1930 Write a function that returns the number of musicians who were born after the year 1930.
+
+Find the musician with the longest list of famous works Write a function that finds and returns the musician with the most famous works.
+
+Generate a list of musicians and the number of famous works they have Write a function that returns an array of objects where each object contains a musician’s name and the number of famous works they have. Example: { name: "Miles Davis", famousWorksCount: 2 }.
+
+Check if all musicians are from the same country Write a function that checks if all musicians in the list have the same nationality and returns true or false.
+
+Find the average birth year of all musicians Write a function that calculates and returns the average birth year of all the musicians.
+
+List musicians who were active during the 1960s Write a function that returns a list of musicians who would have been active during the 1960s (i.e., those who were born before 1950).
+
+Find musicians with exactly two famous works Write a function that returns an array of musicians who have exactly two famous works listed.
+
+We're going to work our way through those exercises. I will send you the data structure we are working from

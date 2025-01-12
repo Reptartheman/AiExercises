@@ -1,0 +1,30 @@
+#scoreboard {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#scores {
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 5px;
+}
+
+#lineup {
+  text-align: center;
+  margin-top: 50px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+}
+
+input, button {
+  margin: 10px;
+}
