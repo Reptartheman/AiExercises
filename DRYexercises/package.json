@@ -1,7 +1,10 @@
 {
+  "type": "module",
+  
   "dependencies": {
     "vitest": "^2.1.2"
   },
+  
   "scripts": {
     "test-all": "vitest --run",
     "test-1": "vitest --run e1.",

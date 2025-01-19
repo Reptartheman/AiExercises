@@ -8,14 +8,14 @@ const users = [
   { firstName: 'Jane', lastName: 'Smith' },
 ];
 
-const fullNames = [];
+/* const fullNames = [];
 for (let i = 0; i < users.length; i++) {
   fullNames.push(`${users[i].firstName} ${users[i].lastName}`);
-}
+} */
 
-console.log(fullNames);
-
-export const generateFullNames = () => {
+  const generateFullNames = (users) => {
+    return users.map(user => `${user.firstName} ${user.lastName}`);
+  };
   
-}
-
+  export default generateFullNames;
+  
