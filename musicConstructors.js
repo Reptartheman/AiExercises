@@ -1,4 +1,4 @@
-class Scale {
+export class Scale {
   constructor(name, hasSharpsOrFlats, numberOfSharpsOrFlats, accidentalNoteNames, notes, intervalsFromRoot, chords) {
     this.name = name;
     this.hasSharpsOrFlats = hasSharpsOrFlats;
@@ -10,14 +10,14 @@ class Scale {
   };
 };
 
-class MajorScale extends Scale {
+export class MajorScale extends Scale {
   constructor(name, hasSharpsOrFlats, numberOfSharpsOrFlats, accidentalNoteNames, notes, intervalsFromRoot, chords) {
     super(name, hasSharpsOrFlats, numberOfSharpsOrFlats, accidentalNoteNames, notes, intervalsFromRoot, chords, relativeMinor);
       this.relativeMinor = relativeMinor;
   };
 };
 
-class MinorScale extends Scale {
+export class MinorScale extends Scale {
   constructor(name, hasSharpsOrFlats, numberOfSharpsOrFlats, accidentalNoteNames, notes, intervalsFromRoot, chords) {
     super(name, hasSharpsOrFlats, numberOfSharpsOrFlats, accidentalNoteNames, notes, intervalsFromRoot, chords, relativeMajor);
       this.relativeMajor = relativeMajor;
@@ -25,7 +25,7 @@ class MinorScale extends Scale {
 };
 
 
-class Instrument {
+export class Instrument {
   constructor(name, type, range, isTransposed, commonGenres) {
     this.name = name;
     this.type = type;

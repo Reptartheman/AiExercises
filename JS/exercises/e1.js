@@ -15,7 +15,13 @@ function getMajorScalesWithAccidentals(scales) {
   const { majorScales } = scales;
 
   return majorScales.filter(scale => scale.hasSharpsOrFlats)
+  .map(scale => {
+    return {
+      name: scale.name,
+      amountOfAccidentals: scale.numberOfSharpsOrFlats,
+    }
+  });
 }
 
 
-export default getMajorScalesWithAccidentals(scales);
+console.log(getMajorScalesWithAccidentals(scales));
