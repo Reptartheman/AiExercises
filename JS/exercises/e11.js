@@ -1,16 +1,25 @@
 /* 
-  Exercise 1: Group Collaborators by Frequency
-Write a function that analyzes the tracks array and returns an object where the keys are collaborator names and the values are the number of tracks they collaborated on.
+  Exercise 11: Group Collaborators by Frequency
+Write a function that analyzes the tracks array and returns an object where the 
+keys are collaborator names and the values are the number of tracks they collaborated on.
 */
 
 import { tracks } from '../../music.js';
 
 function groupCollaboratorsByFrequency(tracks) {
-
+  const countCollabs = tracks.reduce((obj, track) => {
+    const collabName = track.collaborators;
+    obj[collabName] = (obj[collabName] || 0) + 1;
+    return obj;
+  }, {}); 
+  
+  return countCollabs;
 }
 
 
-groupCollaboratorsByFrequency(tracks);
+const collabs = groupCollaboratorsByFrequency(tracks);
+
+console.log(collabs);
 
 
 /* 

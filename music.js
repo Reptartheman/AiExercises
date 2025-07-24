@@ -78,7 +78,7 @@ export const tracks = [
   {
     id: 1,
     title: "Epic Anthem",
-    genre: "Electronic",
+    genre: "EDM",
     tempo: 128,
     collaborators: ["Alice", "Bob"],
     effects: ["reverb", "delay"],
@@ -138,7 +138,7 @@ export const tracks = [
   {
     id: 6,
     title: "Damnit",
-    genre: "Alternative Rock",
+    genre: "Rock and Roll",
     tempo: 130,
     collaborators: ["Not Radiohead", "Kimberly"],
     effects: ["compression", "reverb", "delay", "EQ"],
@@ -150,7 +150,7 @@ export const tracks = [
   {
     id: 7,
     title: "I'm Sorry",
-    genre: "Heavy Metal",
+    genre: "Rock and Roll",
     tempo: 126,
     collaborators: ["Skullz", "Meatheadz"],
     effects: ["compression"],
@@ -162,7 +162,7 @@ export const tracks = [
   {
     id: 8,
     title: "Cheese!",
-    genre: "Clesmer",
+    genre: "EDM",
     tempo: 200,
     collaborators: ["Amish People", "Brooklyn"],
     effects: [],

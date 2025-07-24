@@ -1,19 +1,30 @@
 /* 
 Exercise 2: Count Notes in All Major Scales
-Write a function that takes the scales object and returns an object where each note in the major scales is a key, and the value is how many times that note appears across all major scales.
+Write a function that takes the scales object and returns an object where 
+each note in the major scales is a key, 
+and the value is how many times that note appears across all major scales.
 */
 
 import { scales } from '../../music.js';
 
 
 function countNotesInMajorScales(scales) {
+  const getMajor = scales.majorScales;
+  const getNotes = getMajor.flatMap(scale => scale.notes);
+  const countIt = getNotes.reduce((acc, note) => {
+    acc[note] = (acc[note] || 0) + 1;
+    return acc;
+  }, {})
 
+  return countIt;
+  
 }
 
 
 
-countNotesInMajorScales(scales);
+const demScales = countNotesInMajorScales(scales);
 
+console.log(demScales);
 
 
 /* 

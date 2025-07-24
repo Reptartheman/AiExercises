@@ -5,4 +5,8 @@ Write a function that filters the tracks array, returning only the tracks that u
 
 import { tracks } from '../../music.js';
 
-function filterTracksByEffect(tracks, effect) {}
+function filterTracksByEffect(tracks, effect) {
+  return tracks.filter(track => track.effects.some((eff) => eff === effect ));
+}
+
+console.log(filterTracksByEffect(tracks, "delay"));

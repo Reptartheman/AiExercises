@@ -6,13 +6,14 @@ Write a function that takes the tracks array and returns a new array of track ti
 import { tracks } from "../../music.js";
 
 function reverseTrackTitles(tracks) {
-
+  const trackNames = tracks.map(track => track.title.split('').reverse().join(''));
+  return trackNames;
 }
 
 
 
-reverseTrackTitles(tracks);
-
+const result = reverseTrackTitles(tracks);
+console.log(result);
 
 /* 
 ["mehtnA cipE", "maJ htooJ htoomS", "yaD ynnuS", "ruoH yppaH", ...]
