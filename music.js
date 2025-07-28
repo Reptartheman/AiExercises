@@ -837,3 +837,6 @@ export const scales = {
     },
   ],
 };
+
+
+export const logger = (message) => console.log(message);
